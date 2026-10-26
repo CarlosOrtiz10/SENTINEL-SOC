@@ -1,0 +1,27 @@
+
+SENTINEL-SOC | SIMULACIÓN DIDÁCTICA SIN INCIDENTES REALES
+Implementación de cola: deque
+
+[RECIBIDO] #420 SRV-IDENTIDAD     prioridad=ALTA
+[RECIBIDO] #210 API-PAGOS         prioridad=CRITICA
+[RECIBIDO] #640 SRV-ARCHIVOS      prioridad=MEDIA
+[RECIBIDO] #105 VPN-CORP          prioridad=ALTA
+[RECIBIDO] #310 ENDPOINT-07       prioridad=MEDIA
+[RECIBIDO] #550 BD-OPERACIONES    prioridad=CRITICA
+[RECIBIDO] #730 CORREO            prioridad=BAJA
+
+En espera: 7. Inicia el triaje FIFO:
+[EN ATENCIÓN] #420 Autenticaciones fallidas
+[EN ATENCIÓN] #210 Tráfico anómalo
+[EN ATENCIÓN] #640 Acceso irregular
+[EN ATENCIÓN] #105 Intentos de fuerza bruta
+[EN ATENCIÓN] #310 Ejecutable sospechoso
+[EN ATENCIÓN] #550 Conexión no autorizada
+[EN ATENCIÓN] #730 Suplantación de identidad
+
+ÍNDICE AVL DE INCIDENTES ACTIVOS (ordenado por ID)
+105 -> 210 -> 310 -> 420 -> 550 -> 640 -> 730
+Altura del AVL: 3 | Nodos: 7
+Consulta por ID 550: BD-OPERACIONES
+Incidente 550 resuelto. Consulta posterior: None
+Estado final: pendiente=0, activo=6, resuelto=1, integridad=True

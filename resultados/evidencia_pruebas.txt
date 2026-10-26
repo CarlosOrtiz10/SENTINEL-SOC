@@ -1,0 +1,19 @@
+test_duplicate_and_missing_key (test_sentinel.AVLTests.test_duplicate_and_missing_key) ... ok
+test_four_rotation_patterns (test_sentinel.AVLTests.test_four_rotation_patterns) ... ok
+test_generic_string_keys (test_sentinel.AVLTests.test_generic_string_keys) ... ok
+test_randomized_insert_remove_invariants (test_sentinel.AVLTests.test_randomized_insert_remove_invariants) ... ok
+test_remove_leaf_one_child_two_children (test_sentinel.AVLTests.test_remove_leaf_one_child_two_children) ... ok
+test_sorted_insertions_remain_balanced (test_sentinel.AVLTests.test_sorted_insertions_remain_balanced) ... ok
+test_adt_runtime_contracts (test_sentinel.IncidentCenterTests.test_adt_runtime_contracts) ... ok
+test_duplicate_identifiers_rejected_throughout_lifecycle (test_sentinel.IncidentCenterTests.test_duplicate_identifiers_rejected_throughout_lifecycle) ... ok
+test_full_lifecycle_and_integrity (test_sentinel.IncidentCenterTests.test_full_lifecycle_and_integrity) ... ok
+test_invalid_entity (test_sentinel.IncidentCenterTests.test_invalid_entity) ... ok
+test_missing_resolution_and_empty_processing (test_sentinel.IncidentCenterTests.test_missing_resolution_and_empty_processing) ... ok
+test_both_implementations_implement_fifo (test_sentinel.QueueContractTests.test_both_implementations_implement_fifo) ... ok
+test_empty_queue_raises_controlled_error (test_sentinel.QueueContractTests.test_empty_queue_raises_controlled_error) ... ok
+test_queue_behaves_like_reference_under_random_operations (test_sentinel.QueueContractTests.test_queue_behaves_like_reference_under_random_operations) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.048s
+
+OK

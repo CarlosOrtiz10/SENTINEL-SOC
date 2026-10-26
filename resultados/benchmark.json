@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "python": "3.13.5",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+    "repeats": 7,
+    "sizes": [
+      1000,
+      3000,
+      6000,
+      12000
+    ],
+    "clock": "perf_counter_ns",
+    "memory": "tracemalloc peak allocation"
+  },
+  "queues": [
+    {
+      "n": 1000,
+      "queue": "list",
+      "median_ms": 0.18582,
+      "peak_kib": 32.23
+    },
+    {
+      "n": 1000,
+      "queue": "deque",
+      "median_ms": 0.12981,
+      "peak_kib": 32.58
+    },
+    {
+      "n": 3000,
+      "queue": "list",
+      "median_ms": 0.66523,
+      "peak_kib": 111.44
+    },
+    {
+      "n": 3000,
+      "queue": "deque",
+      "median_ms": 0.33931,
+      "peak_kib": 110.98
+    },
+    {
+      "n": 6000,
+      "queue": "list",
+      "median_ms": 2.16676,
+      "peak_kib": 231.52
+    },
+    {
+      "n": 6000,
+      "queue": "deque",
+      "median_ms": 0.5849,
+      "peak_kib": 228.89
+    },
+    {
+      "n": 12000,
+      "queue": "list",
+      "median_ms": 8.00526,
+      "peak_kib": 472.53
+    },
+    {
+      "n": 12000,
+      "queue": "deque",
+      "median_ms": 1.17225,
+      "peak_kib": 464.33
+    }
+  ],
+  "searches": [
+    {
+      "n": 1000,
+      "queries": 240,
+      "avl_height": 10,
+      "linear_ms": 4.3574,
+      "avl_ms": 0.22161
+    },
+    {
+      "n": 3000,
+      "queries": 240,
+      "avl_height": 12,
+      "linear_ms": 12.00125,
+      "avl_ms": 0.31043
+    },
+    {
+      "n": 6000,
+      "queries": 240,
+      "avl_height": 13,
+      "linear_ms": 25.65735,
+      "avl_ms": 0.35203
+    },
+    {
+      "n": 12000,
+      "queries": 240,
+      "avl_height": 14,
+      "linear_ms": 49.06425,
+      "avl_ms": 0.37717
+    }
+  ]
+}

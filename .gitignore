@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.DS_Store
+
+# Secretos y artefactos locales
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.tmp
+*.log
+resultados_locales/
+GUIA_CODEX_GITHUB.md
+MomentoEvaluativo1*.pdf
+MomentoEvaluativo1*.docx
+documentacion/Guion_Videonota_y_Foro.md
