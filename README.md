@@ -6,28 +6,33 @@ Proyecto académico en **Python 3.10+**, basado en un problema verosímil de ing
 
 ## Arquitectura
 
-```text
-              DATOS SINTÉTICOS
-                     |
-                submit()
-                     v
-             +----------------+
-             | QueueADT[T]    |  << protocolo genérico >>
-             +----------------+
-             | ListQueue[T]   |  append / pop(0)
-             | DequeQueue[T]  |  append / popleft
-             +----------------+
-                     |
-                process_next()
-                     v
-              +--------------+
-              | AVLTree[K,V] |  << índice genérico >>
-              +--------------+
-               |            |
-           find(id)      remove(id)
-               |            |
-          incidencia     resolución
-            activa
+```mermaid
+flowchart TB
+    alerts["Alertas sintéticas"]
+    queue["QueueADT[T]<br/>Protocolo FIFO"]
+    listQueue["ListQueue[T]<br/>append / pop(0)"]
+    dequeQueue["DequeQueue[T]<br/>append / popleft"]
+    active["AVLTree[K,V]<br/>Incidentes activos por ID"]
+    lookup["Consulta de incidente activo"]
+    resolved["Incidente resuelto"]
+
+    alerts -->|"submit()"| queue
+    listQueue -. "implementa (alternativa)" .-> queue
+    dequeQueue -. "implementa (alternativa)" .-> queue
+    queue -->|"process_next() - FIFO"| active
+    active -->|"find(id)"| lookup
+    active -->|"remove(id)"| resolved
+
+    classDef input fill:#e2e8f0,stroke:#64748b,color:#0f172a
+    classDef contract fill:#dbeafe,stroke:#3b82f6,color:#172554
+    classDef implementation fill:#f1f5f9,stroke:#64748b,color:#0f172a
+    classDef index fill:#ccfbf1,stroke:#0f766e,color:#134e4a
+    classDef output fill:#f1f5f9,stroke:#64748b,color:#0f172a
+    class alerts input
+    class queue contract
+    class listQueue,dequeQueue implementation
+    class active index
+    class lookup,resolved output
 ```
 
 Un identificador de incidente es único. La **cola** mantiene el orden FIFO (la severidad no modifica el orden), y el **AVL** ordena por ID las alertas que ya salieron de la cola y siguen sin resolver. Esta separación evita confundir una cola de atención con un árbol de búsqueda.
